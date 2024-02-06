@@ -10,7 +10,7 @@ class Node{
 }
 public class LinkedList {
     Node head;
-    public void LinkedList(){
+    public LinkedList(){
         head = null;
     }
     public void insert(int val,int insertAfterElement) {
