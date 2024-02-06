@@ -20,12 +20,8 @@ public class LinkedList {
             head = newNode;
         }
         else {
-            Node current = head;
-            // To find the last node
-            while(current.next != null){
-                current = current.next;
-            }
-            current.next = newNode;
+            newNode.next = head;
+            head = newNode;
         }
     }
         public void display() {
