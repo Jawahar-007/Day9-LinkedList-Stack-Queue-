@@ -10,7 +10,7 @@ class Node{
 }
 public class LinkedList {
     Node head;
-    public void LinkedList(){
+    public LinkedList(){
         head = null;
     }
     public void insert(int val) {
@@ -25,19 +25,6 @@ public class LinkedList {
             }
         }
 
-        public void deletelastnode(){
-        if(head==null||head.next==null)
-            head = null;
-        else{
-            Node current = head;
-            while(current.next.next != null){
-                current = current.next;
-            }
-            current.next = null;
-        }
-        }
-
-         */
         public void display() {
             //To delete first node change head to next node
             //head = head.next;
