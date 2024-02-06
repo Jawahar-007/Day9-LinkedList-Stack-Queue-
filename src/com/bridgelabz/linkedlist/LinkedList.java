@@ -10,7 +10,7 @@ class Node{
 }
 public class LinkedList {
     Node head;
-    public void LinkedList(){
+    public LinkedList(){
         head = null;
     }
     public void insert(int val) {
@@ -32,7 +32,7 @@ public class LinkedList {
             while(current!= null){
                 current = current.next;
             }
-            current.next = head;
+            current.next = newNode1;
         }
     }
         public void display() {
