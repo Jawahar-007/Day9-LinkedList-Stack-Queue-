@@ -38,7 +38,7 @@ public class LinkedList {
         }
         public void display() {
             //To delete first node change head to next node
-            //head = head.next;
+            head = head.next;
             Node temp = head;
             while(temp!=null){
                 System.out.print(temp.data+"->");
