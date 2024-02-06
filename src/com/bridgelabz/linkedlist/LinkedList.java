@@ -25,7 +25,7 @@ public class LinkedList {
             }
         }
 
-        /*public void deletelastnode(){
+        public void deletelastnode(){
         if(head==null||head.next==null)
             head = null;
         else{
@@ -40,7 +40,7 @@ public class LinkedList {
          */
         public void display() {
             //To delete first node change head to next node
-            head = head.next;
+            //head = head.next;
             Node temp = head;
             while(temp!=null){
                 System.out.print(temp.data+"->");
