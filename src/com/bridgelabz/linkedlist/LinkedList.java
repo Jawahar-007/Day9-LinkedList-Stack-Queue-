@@ -18,14 +18,21 @@ public class LinkedList {
         // Empty List check
         if (head == null) {
             head = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
         }
-        else {
+    }
+    public void append(int val){
+        Node newNode1 = new Node(val);
+        if(head == null)
+            head = newNode1;
+        else{
             Node current = head;
-            // To find the last node
-            while(current.next != null){
+            while(current!= null){
                 current = current.next;
             }
-            current.next = newNode;
+            current.next = head;
         }
     }
         public void display() {
