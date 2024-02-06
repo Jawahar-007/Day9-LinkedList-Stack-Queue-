@@ -13,33 +13,30 @@ public class LinkedList {
     public void LinkedList(){
         head = null;
     }
-    public void insert(int val) {
+    public void insert(int val,int insertAfterElement) {
         Node newNode = new Node(val);
         // Empty List check
         if (head == null) {
             head = newNode;
-        } else {
-            newNode.next = head;
-            head = newNode;
         }
-    }
-    public void append(int val){
-        Node newNode1 = new Node(val);
-        if(head == null)
-            head = newNode1;
-        else{
+        else{ //In node insertion of element is done in between
             Node current = head;
-            while(current!= null){
+            while(current!= null&&current.data!=insertAfterElement){
                 current = current.next;
             }
-            current.next = head;
+            if(current!=null){
+                newNode.next = current.next;
+                current.next = newNode;
+            }
+
         }
     }
         public void display() {
             Node temp = head;
             while(temp!=null){
-                System.out.print(temp.data+" ");
+                System.out.print(temp.data+"->");
                 temp=temp.next;
         }
+            System.out.println("NULL");
     }
 }
